@@ -1,4 +1,4 @@
-import { projectionPipelineSetOutputShape, superKernelPerspectivePipeline } from "../../../js/engine/rendering/gpu/ProjectionPipelineKernels"
+import { projectionPipelineSetOutputShape, superKernelPerspectivePipeline } from "../../../raw-js-canyon-game/engine/rendering/gpu/ProjectionPipelineKernels"
 
 test("testProjectionPipelineKernels", () => {
     let cameraTransformMatrix = [

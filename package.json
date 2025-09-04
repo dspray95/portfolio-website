@@ -11,7 +11,6 @@
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
     "dotenv": "^16.0.1",
-    "gpu.js": "^2.11.4",
     "noisejs": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -30,7 +29,25 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+    
+      "no-restricted-globals": "off", 
+      "no-undef": "off"
+    },
+    "globals": {
+      "FinalizationRegistry": "readonly",
+      "GPUAdapter": "readonly",
+      "GPUCanvasContext": "readonly",
+      "GPUOutOfMemoryError": "readonly",
+      "GPUValidationError": "readonly",
+      "globalThis": "readonly", 
+      "self": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    }
   },
   "browserslist": {
     "production": [

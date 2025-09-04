@@ -1,5 +1,5 @@
-const Transform = require("../../../../js/engine/rendering/matrices/Transform");
-const Matrix = require("../../../../js/engine/rendering/matrices/Matrix");
+const Transform = require("../../../../raw-js-canyon-game/engine/rendering/matrices/Transform");
+const Matrix = require("../../../../raw-js-canyon-game/engine/rendering/matrices/Matrix");
 
 test("translate positive 3D", () => {
   let A = [[1], [2], [3], [1]]

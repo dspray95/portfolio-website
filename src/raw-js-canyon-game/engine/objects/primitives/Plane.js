@@ -1,5 +1,5 @@
 import WorldObject from "../WorldObject";
-import Point from "../primitives/Point";
+import Point from "./Point";
 import Mesh from "./Mesh";
 import { Color } from "../../../tools/Colors"
 

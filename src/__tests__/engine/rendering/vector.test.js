@@ -1,4 +1,4 @@
-import Vector from "../../../js/engine/rendering/objects/primitives/Vector"
+import Vector from "../../../raw-js-canyon-game/engine/rendering/objects/primitives/Vector"
 
 test("dot product vector", () => {
   let vecA = new Vector(1, 2, 3)
