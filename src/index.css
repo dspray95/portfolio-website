@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  @font-face {
+    font-family: "Quickzag";
+    src: url("/fonts/Quickzag.ttf") format("truetype");
+    font-weight: 400; 
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "ReDo";
+    src: url("/fonts/re-do.ttf") format("truetype");
+    font-weight: 400; 
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    @apply min-h-screen w-full bg-gray-900;
+  }
 }
