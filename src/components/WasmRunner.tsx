@@ -6,11 +6,12 @@ import initWasm, {
 
 export const WasmRunner: React.FC<{
   setWasmError: Dispatch<SetStateAction<Error | null>>;
-}> = ({ setWasmError }) => {
+  wasmStarted: boolean;
+  setWasmStarted: Dispatch<SetStateAction<boolean>>;
+}> = ({ setWasmError, wasmStarted, setWasmStarted }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   const [wasmInitialized, setWasmInitialized] = useState(false);
-  const [wasmStarted, setWasmStarted] = useState(false);
 
   // Init wasm once on component mount
   useEffect(() => {

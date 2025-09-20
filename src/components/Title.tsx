@@ -1,10 +1,10 @@
 export const Title: React.FC = () => {
   return (
-    <div className="relative flex flex-col pt-[5%]">
+    <div className="relative flex flex-col pt-[15%] pb-8 md:pt-[5%]">
       <div className="w-full pl-12 font-mono text-white" aria-hidden="true">
         HI, I'M
       </div>
-      <div className="relative flex w-fit min-h-[10rem] items-center justify-center font-graffiti text-[15rem]">
+      <div className="relative flex w-fit min-h-[10rem] items-center justify-center font-graffiti text-[10rem] md:text-[15rem]">
         <h1
           className="relative 
                        before:content-[attr(data-text)] before:absolute before:top-0 before:left-0

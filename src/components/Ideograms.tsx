@@ -6,7 +6,7 @@ import { NeuralNetSVG } from "./svg/NeuralNetSVG";
 export const Ideograms: React.FC = () => {
   return (
     <>
-      <div className="fixed bottom-0 left-0">
+      <div className="fixed bottom-0 -left-20 md:left-0">
         <MorseSVG
           ditDahList=".... .. .-. . / -- ." //hire me!
           width={300}
@@ -15,7 +15,7 @@ export const Ideograms: React.FC = () => {
           strokeWidth={1.5}
         />
       </div>
-      <div className="fixed top-0 left-0">
+      <div className="fixed top-0 left-0 invisible md:visible">
         <NeuralNetSVG
           layerNeuronCounts={[4, 6, 6, 3]}
           canvasWidth={300}
@@ -41,7 +41,7 @@ export const Ideograms: React.FC = () => {
           alignment="right"
         />
       </div>
-      <div className="fixed right-0 bottom-[15%]">
+      <div className="fixed right-0 bottom-[16.5%] md:bottom-[15%] ">
         <MountainRangeSVG
           width={225}
           height={50}
