@@ -15,7 +15,7 @@ function App() {
   const [showSpinner, setShowSpinner] = useState(true);
   const [spinnerTimerActive, setSpinnerTimerActive] = useState(true);
 
-  const MIN_LOADING_TIME = 1500;
+  const MIN_LOADING_TIME_MS = 1500;
 
   useEffect(() => {
     let timer: NodeJS.Timeout | null = null;
@@ -26,7 +26,7 @@ function App() {
         if (wasmStarted || wasmError) {
           setShowSpinner(false);
         }
-      }, MIN_LOADING_TIME);
+      }, MIN_LOADING_TIME_MS);
     } else {
       if (wasmStarted || wasmError) {
         setShowSpinner(false);
@@ -79,7 +79,7 @@ function App() {
           wasmStarted={wasmStarted}
         />
       )}
-      {wasmError && <EngineRenderer />}
+      {wasmError && <EngineRenderer /> /** Fallback to old pure js renderer */}
       <div
         id="centerpiece"
         className="relative w-full min-h-svh flex flex-col items-center text-white text-4xl z-30 pointer-events-none"
