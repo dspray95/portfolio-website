@@ -14,7 +14,7 @@ The live version of the website can be found [here](https://david-spray.scot/).
 
 ## Game Controls
 
-You can currently strafe your star-fighter left and right with the **w** and **d** keys, and you can fire your star-fighter's lazer with the **space** key.
+You can currently strafe your star-fighter left and right with the **a** / **←** and **d** / **→** keys, and you can fire your star-fighter's lazer with the **space** key.
 
 ## Available Scripts
 
