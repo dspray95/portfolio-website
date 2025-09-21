@@ -47,7 +47,7 @@ function App() {
   }, [spinnerTimerActive, wasmStarted, wasmError]);
 
   useEffect(() => {
-    if (showSpinner === false) {
+    if (wasmError) {
       toast.custom((t) =>
         getToast(
           t,
@@ -55,7 +55,7 @@ function App() {
         )
       );
     }
-  }, [showSpinner]);
+  }, [wasmError]);
 
   return (
     <main>
