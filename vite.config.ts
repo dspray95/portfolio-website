@@ -18,20 +18,8 @@ export default defineConfig(() => {
         hooks: resolve(__dirname, "src", "hooks"),
       },
     },
-    optimizeDeps: {
-      // Exclude your WASM glue code module from Vite's dependency pre-bundling.
-      // This should make Vite serve it as raw ESM without Esbuild transformation.
-      exclude: ["../wasm-canyon-game/wasm_game_engine", "@syntect/wasm"], // Or the full path
-      // if using aliases, ensure it matches the final resolved path.
-      // Use the actual import path your WasmRunner uses.
-      // Example: if `import ... from "../wasm-canyon-game/wasm_game_engine";`
-      // then the string should be exactly "../wasm-canyon-game/wasm_game_engine"
-    },
     build: {
-      target: "esnext", // Or 'es2022'
-      rollupOptions: {
-        external: ["../wasm-canyon-game/wasm_game_engine"], // Tell Rollup not to bundle it
-      },
+      target: "esnext",
     },
   };
 });

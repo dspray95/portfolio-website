@@ -2,3 +2,5 @@ node_modules
 .idea
 dist
 .eslintcache
+firebase-config.json
+.firebase/

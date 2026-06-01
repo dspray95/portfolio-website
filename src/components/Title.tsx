@@ -1,6 +1,10 @@
-export const Title: React.FC = () => {
+export const Title: React.FC<{ gameStarted?: boolean }> = ({ gameStarted = false }) => {
   return (
-    <div className="relative flex flex-col pt-[15%] pb-8 md:pt-[5%]">
+    <div
+      className={`relative flex flex-col pt-[15%] pb-8 md:pt-[5%] transition-transform duration-700 ease-in-out ${
+        gameStarted ? "-translate-y-[200%]" : "translate-y-0"
+      }`}
+    >
       <div className="w-full pl-12 font-mono text-white" aria-hidden="true">
         HI, I'M
       </div>

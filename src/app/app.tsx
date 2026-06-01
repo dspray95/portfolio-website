@@ -12,6 +12,7 @@ import { getToast } from "components/Toast";
 function App() {
   const [wasmError, setWasmError] = useState<Error | null>(null);
   const [wasmStarted, setWasmStarted] = useState(false);
+  const [gameStarted, setGameStarted] = useState(false);
   const [showSpinner, setShowSpinner] = useState(true);
   const [spinnerTimerActive, setSpinnerTimerActive] = useState(true);
 
@@ -77,6 +78,7 @@ function App() {
           setWasmError={setWasmError}
           setWasmStarted={setWasmStarted}
           wasmStarted={wasmStarted}
+          setGameStarted={setGameStarted}
         />
       )}
       {wasmError && <EngineRenderer /> /** Fallback to old pure js renderer */}
@@ -84,8 +86,12 @@ function App() {
         id="centerpiece"
         className="relative w-full min-h-svh flex flex-col items-center text-white text-4xl z-30 pointer-events-none"
       >
-        <Title />
-        <div className="flex items-center justify-center w-full gap-12 pointer-events-auto">
+        <Title gameStarted={gameStarted} />
+        <div
+          className={`flex items-center justify-center w-full gap-12 pointer-events-auto transition-transform duration-700 ease-in-out ${
+            gameStarted ? "translate-y-[62vh]" : "translate-y-0"
+          }`}
+        >
           <SocialIcon type="linkedin" />
           <SocialIcon type="github" />
         </div>
